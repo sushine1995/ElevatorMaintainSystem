@@ -143,7 +143,7 @@
 							</label></th>
 							<th style="width: 10px">#</th>
 							<th>工单号</th>
-							<th>电梯编号</th>
+							<th>设备编号</th>
 							<th>故障描述</th>
 							<th>故障原因</th>							
 							<th>故障时间</th>

@@ -142,7 +142,7 @@
 										<%--  <shiro:hasPermission name="maintainPlan:bindElevator">
 											<button id="bindRoleBtn" type="button"
 												class="btn  btn-xs btn-primary btn-flat"
-												onclick='bindItem(${maintainPlan.id})'>电梯绑定</button>
+												onclick='bindItem(${maintainPlan.id})'>设备绑定</button>
 										</shiro:hasPermission> --%>
 										</td>
 								</tr>

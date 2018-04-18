@@ -153,7 +153,7 @@
 								</label></th>
 								<th style="width: 10px">#</th>
 								<th>工单号</th>
-								<th>电梯编号</th>
+								<th>设备编号</th>
 								<th>截止日期</th>
 								<th>接单时间</th>
 								<th>维保小组</th>

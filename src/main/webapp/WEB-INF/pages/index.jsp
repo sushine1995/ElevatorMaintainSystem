@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 -->
 <html>
 <head>
-<title>电梯维保管理系统</title>
+<title>养殖场温度监测系统</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <%@ include file="/WEB-INF/pages/common/default_header.jsp"%>

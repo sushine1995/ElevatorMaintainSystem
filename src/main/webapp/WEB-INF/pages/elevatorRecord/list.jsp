@@ -156,7 +156,7 @@
 							<th>设备编号</th>
 							<th>设备地址</th>
 							<th>使用单位</th>
-							<th>电梯类型</th>
+							<th>设备类型</th>
 							<th>所属小组</th>
 							<th>客户电话</th>
 							<!-- <th>上次保养时间</th> -->
@@ -327,7 +327,7 @@
 			$("#modal").modal();
 		});		
 	}
-	//绑定保养计划，允许选择多个电梯
+	//绑定保养计划，允许选择多个设备
 	function bindMaintainPlan(){
 		var elevatorRecordIds = [];
 		var i = 0;

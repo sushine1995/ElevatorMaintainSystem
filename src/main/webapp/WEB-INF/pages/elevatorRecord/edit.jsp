@@ -30,12 +30,12 @@
 				value="${elevatorRecord.phone}">
 		</div>
 		<div class="form-group">
-			<label for="type" class="control-label">电梯类型:</label> <input
+			<label for="type" class="control-label">设备类型:</label> <input
 				type="text" class="form-control" id="type" name="type"
 				value="${elevatorRecord.type}">
 		</div>
 		<div class="form-group">
-			<label for="modelNumber" class="control-label">电梯型号:</label> <input
+			<label for="modelNumber" class="control-label">设备型号:</label> <input
 				type="text" class="form-control" id="modelNumber" name="modelNumber"
 				value="${elevatorRecord.modelNumber}">
 		</div>

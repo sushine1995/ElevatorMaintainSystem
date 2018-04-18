@@ -38,7 +38,7 @@
 			<td>${elevatorRecord.phone}</td>
 		</tr>
 		<tr>
-			<td>电梯类型:</td>
+			<td>设备类型:</td>
 			<td>${elevatorRecord.type}</td>
 		</tr>
 		<tr>

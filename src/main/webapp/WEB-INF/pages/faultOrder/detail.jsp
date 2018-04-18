@@ -20,7 +20,7 @@
 			<td>${faultOrder.no}</td>
 		</tr>
 		<tr>
-			<td>电梯编号:</td>
+			<td>设备编号:</td>
 			<td>${faultOrder.elevatorRecord.no}</td>
 		</tr>
 		<tr>

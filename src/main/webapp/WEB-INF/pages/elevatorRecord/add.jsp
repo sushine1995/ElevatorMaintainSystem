@@ -147,7 +147,7 @@ $('#modal').on('shown.bs.modal', function(event) {
 							},
 							success : function(data) { //请求成功后处理函数。    
 								if(data=="\"entityDuplicate\""){
-									alert("电梯编号重复");
+									alert("设备编号重复");
 								}else{
 									alert("success");
 									$('#modal').on('hidden.bs.modal',function(event){//当modal框完全隐藏后再刷新页面content，要不然有bug
