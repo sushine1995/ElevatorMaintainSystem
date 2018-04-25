@@ -94,12 +94,18 @@
 								<span class="fa fa-fw fa-remove" aria-hidden="true"></span> 删除
 							</button>
 						</shiro:hasPermission>
+						
+						<%-- 
 						<shiro:hasPermission name="elevatorRecord:bindMaintainPlan">
 						<button id="bindMaintainPlanBtn" type="button"
 								class="btn  btn-primary btn-flat margin" onclick="bindMaintainPlan()">
 								<span class="fa fa-fw fa-plus" aria-hidden="true"></span> 绑定保养计划 
 						</button>
 						</shiro:hasPermission>
+						 --> 
+						
+						 
+						 
 						<%-- <shiro:hasPermission name="elevatorRecord:upload">
 							<button id="uploadBtn" type="button"
 								class="btn  btn-primary btn-flat margin" onclick="uploadItem()">
@@ -160,7 +166,10 @@
 							<th>所属小组</th>
 							<th>客户电话</th>
 							<!-- <th>上次保养时间</th> -->
+							<!-- 
 							<th>保养计划</th>
+							 -->
+							
 							
 							<th >操作</th>
 
@@ -192,8 +201,10 @@
 									<shiro:hasPermission name="elevatorRecord:bind">
 										<button id="bindRoleBtn" type="button"
 											class="btn  btn-xs btn-primary btn-flat"  onclick='bindItem(${elevatorRecord.id})'>小组绑定</button>
+					<!--
 									</shiro:hasPermission>
 										<shiro:hasPermission name="elevatorRecord:addFaultOrder">
+										 
 										<button id="addFaultOrderBtn" type="button"
 											class="btn  btn-xs btn-primary btn-flat"  onclick='addFaultOrder(${elevatorRecord.id})'>发布故障工单</button>
 									</shiro:hasPermission>
@@ -201,7 +212,7 @@
 										<button id="addMaintainOrderBtn" type="button"
 											class="btn  btn-xs btn-primary btn-flat"  onclick='addMaintainOrder(${elevatorRecord.id})'>发布保养工单</button>
 									</shiro:hasPermission>
-									
+					 -->				
 									</td>
 							</tr>
 						</c:forEach>
@@ -315,6 +326,7 @@
 			url : "elevatorRecord/search",//请求的action路径  
 			error : function() {//请求失败处理函数  
 				alert('失败');
+			
 			},
 			success : function(data) { //请求成功后处理函数。    
 				$("#content-wrapper").html(data);//刷新content页面		

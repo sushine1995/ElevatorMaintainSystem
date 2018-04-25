@@ -61,7 +61,7 @@ function deleteItemsById(deleteIds, action) {
 		}),
 		url : action,// 请求的action路径
 		error : function() {// 请求失败处理函数
-			alert('失败');
+			alert('删除失败');
 		},
 		success : function(data) { // 请求成功后处理函数。
 			alert("成功");
@@ -93,7 +93,8 @@ function deleteItemsUseModal(checkboxSelector, action) {
 		// dataType : "json",//返回的数据类型
 		url : action,// 请求的action路径
 		error : function() {// 请求失败处理函数
-			alert('失败');
+			alert('删除失败');
+			$("#deleteConfirmModal").modal('hide');
 		},
 		success : function(data) { // 请求成功后处理函数。
 			alert("成功");

@@ -156,7 +156,7 @@ public class ElevatorRecordServiceImpl extends AbstractBaseServiceImpl<ElevatorR
 		Group group=plan.getGroup();
 		for(long id:elevatorRecordIds){
 			ElevatorRecord e=elevatorRecordRepository.findOne(id);
-			if(group!=null){//将电梯负责小组绑定为合同的负责小组
+			if(group!=null){//将设备负责小组绑定为合同的负责小组
 				e.setGroup(group);
 			}
 			e.setMaintainPlan(plan);

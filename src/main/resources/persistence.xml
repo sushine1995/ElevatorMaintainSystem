@@ -25,6 +25,7 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd" 
 			<property name="hibernate.cache.provider_configuration_file_resource_path">ehcache.xml</property> 
             <!--配置如何根据java模型生成数据库表结构,常用update,validate-->
 			<property name="hibernate.hbm2ddl.auto" value="update"/>
+			
 			<!-- 以下添加二级缓存 -->
 		</properties>
 	</persistence-unit>

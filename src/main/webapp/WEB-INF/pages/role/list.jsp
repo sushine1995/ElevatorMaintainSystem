@@ -142,7 +142,7 @@
 										</shiro:hasPermission> <shiro:hasPermission name="role:bind">
 											<button id="bindRoleBtn" type="button"
 												class="btn  btn-xs btn-primary btn-flat "
-												onclick='bindItem(${role.id})'>资源绑定</button>
+												onclick='bindItem(${role.id})'>权限绑定</button>
 										</shiro:hasPermission></td>
 								</tr>
 							</c:forEach>

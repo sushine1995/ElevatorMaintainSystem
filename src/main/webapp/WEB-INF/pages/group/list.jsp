@@ -219,6 +219,7 @@
 	$('#deleteConfirmModal').on('shown.bs.modal', function(event) {
 		$('#deleteConfirmBtn').click(function(){
 			deleteItemsUseModal("input[class*='deleteCheckbox']","group/delete");
+		
 		});
 	});
 	/* button监听事件 */

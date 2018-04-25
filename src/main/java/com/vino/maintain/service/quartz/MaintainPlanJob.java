@@ -56,7 +56,7 @@ public class MaintainPlanJob {
 		List<MaintainPlan> maintainPlans = maintainPlanRepository
 				.findAvailalbeMaintainPlans(new LocalDate(year, month, day).toDate());
 
-		// 1.获取保养计划2.获取对应的电梯3.生成对应的保养工单
+		// 1.获取保养计划2.获取对应的设备3.生成对应的保养工单
 		for (MaintainPlan m : maintainPlans) {
 			List<ElevatorRecord> elevatorRecords = m.getElevatorRecords();
 			for (ElevatorRecord e : elevatorRecords) {
@@ -88,7 +88,7 @@ public class MaintainPlanJob {
 		DateTime finalDate = new DateTime(year, month, day, 23, 59, 59);// 截止日期为每月最后一天的23:59:59
 		List<MaintainPlan> maintainPlans = maintainPlanRepository
 				.findAvailalbeMaintainPlans(new LocalDate(year, month, day).toDate());
-		// 1.获取保养计划2.获取对应的电梯3.生成对应的保养工单
+		// 1.获取保养计划2.获取对应的设备3.生成对应的保养工单
 		for (MaintainPlan m : maintainPlans) {
 			List<ElevatorRecord> elevatorRecords = m.getElevatorRecords();
 			for (ElevatorRecord e : elevatorRecords) {
@@ -115,8 +115,8 @@ public class MaintainPlanJob {
 	public void createYearMaintainOrder() {
 		/**
 		 * 1.从维保合同中选取未过期的合同
-		 * 2.选取未过期的合同中的电梯
-		 * 3.判断电梯上次的年检时间，若当前时间与上次年检时间已经差距11个月，则创建年检工单并进行提醒
+		 * 2.选取未过期的合同中的设备
+		 * 3.判断设备上次的年检时间，若当前时间与上次年检时间已经差距11个月，则创建年检工单并进行提醒
 		 */
 		MaintainType maintainType = maintainTypeRepository.findByName(ElevatorConstants.annual_Inspection);
 		
@@ -126,7 +126,7 @@ public class MaintainPlanJob {
 		int year = current.getYear();
 		List<MaintainPlan> maintainPlans = maintainPlanRepository
 				.findAvailalbeMaintainPlans(new LocalDate(year, month, day).toDate());
-		// 1.获取保养计划2.获取对应的电梯3.生成对应的保养工单
+		// 1.获取保养计划2.获取对应的设备3.生成对应的保养工单
 		for (MaintainPlan m : maintainPlans) {
 			List<ElevatorRecord> elevatorRecords = m.getElevatorRecords();
 			for (ElevatorRecord e : elevatorRecords) {

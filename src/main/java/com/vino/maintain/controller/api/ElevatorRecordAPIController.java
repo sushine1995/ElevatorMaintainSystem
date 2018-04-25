@@ -38,7 +38,7 @@ public class ElevatorRecordAPIController extends BaseController {
 		return new PageRequest(pageNumber - 1, pageSize, new Sort(Direction.DESC, "id"));
 	}
 	/**
-	 * 若groupId不为null，则查询该组的电梯，否则查询所有电梯
+	 * 若groupId不为null，则查询该组的设备，否则查询所有设备
 	 * @param pageNumber
 	 * @param pageSize
 	 * @param groupId

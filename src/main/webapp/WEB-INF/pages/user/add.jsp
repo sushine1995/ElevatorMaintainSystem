@@ -74,7 +74,7 @@ $('#modal').on('shown.bs.modal', function(event) {
 							url : "user/add",//请求的action路径  
 							error : function(jqXHR,textStatus,errorThrown ) {//请求失败处理函数  
 								alert('失败');
-								
+								$('#modal').modal('hide');
 								if(errorThrown=="Moved Permanently")//用户超时未登录，跳转登录界面
 									window.location.href="login";
 								
@@ -84,6 +84,7 @@ $('#modal').on('shown.bs.modal', function(event) {
 									alert("用户名重复");
 								}else{
 									alert("success");
+									$('#modal').modal('hide');
 									$('#modal').on('hidden.bs.modal',function(event){//当modal框完全隐藏后再刷新页面content，要不然有bug
 										$("#content-wrapper").html(data);//刷新content页面
 									});
