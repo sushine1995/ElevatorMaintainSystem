@@ -7,11 +7,11 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
 	<h1>
-		故障工单管理 <small></small>
+		设备监控 <small></small>
 	</h1>
 	<ol class="breadcrumb">
 		<li><a href="#"><i class="fa fa-dashboard"></i>系统管理</a></li>
-		<li class="active">故障工单管理</li>
+		<li class="active">设备监控</li>
 	</ol>
 </section>
 <!-- Main content -->
@@ -67,7 +67,7 @@
 										
 											<!-- Date range -->
 											<div class="form-group  col-md-4">
-												<label>故障发生时间:</label>
+												<label>上传时间:</label>
 												<div class="input-group">
 													<div class="input-group-addon">
 														<i class="fa fa-calendar"></i>
@@ -100,7 +100,7 @@
 				<!-- /.row -->
 				<div class="box box-primary">
 					<div class="box-header with-border">
-						<h3 class="box-title">故障工单列表</h3>
+						<h3 class="box-title">设备列表</h3>
 					</div>
 					<div class="btn-group">
 						<!-- 注意，为了设置正确的内补（padding），务必在图标和文本之间添加一个空格。 -->
@@ -117,6 +117,7 @@
 								<span class="fa fa-fw fa-remove" aria-hidden="true"></span> 删除
 							</button>
 						</shiro:hasPermission>
+						<%-- 
 						<shiro:hasPermission name="faultOrder:upload">
 							<button id="uploadBtn" type="button"
 								class="btn  btn-primary btn-flat margin" onclick="uploadItem()">
@@ -133,7 +134,7 @@
 							<input id="downloadIds" type="hidden" name="downloadIds[]">
 							</form>
 							</shiro:hasPermission>
-							
+						 --%>	
 					</div>
 				<div class="table-responsive">
 					<table class="table table-hover center">
@@ -142,15 +143,21 @@
 									type="checkbox" class="minimal" value="0">
 							</label></th>
 							<th style="width: 10px">#</th>
+							<!-- 
 							<th>工单号</th>
+							-->
 							<th>设备编号</th>
+							<!-- 
 							<th>故障描述</th>
-							<th>故障原因</th>							
-							<th>故障时间</th>
-							<th>接单时间</th>
-							<th>维保小组</th>
-							<th>维保人员</th>
-							<th>是否修好</th>
+							<th>故障原因</th>		
+							-->					
+							<th>上传时间</th>
+							
+							<!--  <th>接单时间</th>  -->
+							<th>所属农舍</th>
+							<th>维护人员</th>
+							
+							<!-- <th>是否修好</th>   -->
 							<th >操作</th>
 
 						</tr>
@@ -159,16 +166,24 @@
 								<td><label><input type="checkbox"
 										class="minimal deleteCheckbox" value="${faultOrder.id}"></label></td>
 								<td>${status.count}</td>
-								<td>${faultOrder.no }</td>
+								<!-- 
+								<td>${faultOrder.no }</td>  
+								-->
+								
 								<td>${faultOrder.elevatorRecord.no}</td>
+								<!--
 								<td>${faultOrder.description}</td>
 								<td>${faultOrder.reason}</td>
+								-->
 								<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
 										value="${faultOrder.occuredTime}" /></td>
+								<!-- 
 								<td><fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss"
 										value="${faultOrder.receivingTime}" /></td>
+										-->
 								<td>${faultOrder.elevatorRecord.group.name}</td>
 								<td>${faultOrder.employee.name}</td>
+								<!-- 
 								<c:choose>
 									<c:when test="${faultOrder.fixed}">
 										<td><span class="badge bg-green">已修好</span></td>
@@ -177,7 +192,8 @@
 										<td><span class="badge bg-red">未修好</span></td>
 									</c:otherwise>
 								</c:choose>				
-
+								-->
+								
 								<td><shiro:hasPermission name="faultOrder:update">
 										<button id="updateBtn" type="button"
 											class="btn btn-xs btn-primary btn-flat" onclick='updateItem(${faultOrder.id})'>编辑</button>
